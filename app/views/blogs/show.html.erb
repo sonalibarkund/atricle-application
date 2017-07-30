@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @blog.image.url %>" width="100" height="100"/>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Shortdesc:</strong>
+  <%= @blog.shortdesc %>
+</p>
+
+<p>
+  <strong>Longdesc:</strong>
+  <%= @blog.longdesc %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @blog.status %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @blog.date %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @blog.slug %>
+</p>
+
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>

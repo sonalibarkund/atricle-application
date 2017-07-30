@@ -1,0 +1,63 @@
+<section>
+	<div class="container pdnt100">
+		Contact Us Page
+	</div>
+	<div id="form-success" style="display: none;">
+		Successully submitted data
+	</div>
+	<div id="form-fields">
+		<form class="new_contact" id="new_contact" action="/create_contacts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xFoO4D/reVUxuU5dGbI5ED5/HUDt6zdUdX8OB1Mzf9SxJZ9gIb+czoG0MG4OcgovTKQX2G+Ghr7wyNOPhVNE6w==" />
+			  <div class="field">
+			    <label for="contact_name">Name</label>
+			    <input type="text" name="contact[name]" id="contact_name" class="" />
+			  </div>
+			  <br/>
+			  <div class="field">
+			    <label for="contact_email">Email</label>
+			    <input type="text" name="contact[email]" id="contact_email" class="required email" />
+			  </div>
+			  <br/>
+			  <div class="field">
+			    <label for="contact_phoneno">Phoneno</label>
+			    <input type="text" name="contact[phoneno]" minlength="10" maxlength="10"  id="contact_phoneno" class="required number" />
+			  </div>
+			  <br/>
+			  <div class="field">
+			    <label for="contact_comments">Comments</label>
+			    <textarea name="contact[comments]" id="contact_comments"></textarea>
+			  </div>
+			  <br/>
+			  <div class="actions">
+			    <input type="submit" name="commit" value="Create Contact" data-disable-with="Create Contact" />
+			  </div>
+			  <br/>
+		</form>
+	</div>
+
+</section>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+
+	$.validator.setDefaults({
+		submitHandler: function() {
+			$.ajax({
+				type:"POST",
+				dataType:"json",
+				url:$("#new_contact").attr("action"),
+				data:$("#new_contact").serialize(),
+				success: function(resp, status, xhr){
+					if(resp.status == "success"){
+						jQuery('#form-fields').hide();
+        				jQuery('#form-success').show();
+					}else{}
+				},
+				error: function(resp, status, xhr){
+				}
+			});
+
+		}
+	});
+	$("#new_contact").validate();
+});
+
+</script>

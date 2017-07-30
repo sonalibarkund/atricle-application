@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @metatitle %></title>
+    <meta content="<%= @metadescription %>" name="description">
+    <meta content="<%= @metakeywords %>" name="keyword">
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" type="text/css" href="/site/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/site/css/jquery.bxslider.css">
+    
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  </head>
+  <body>
+	  <div class="headerwrapper">
+	  	<div class="text-left logo"></div>
+	  	<div class="text-left navbar">
+	  		<ul>
+	  			<li><a href="<%= url_index %>">Home</a></li>
+	  			<li><a href="<%= url_overview %>">Overview</a></li>
+	  			<li><a href="<%= url_floorplan %>">Floor Plan</a></li>
+	  			<li><a href="<%= url_testimonial %>">Testimonial</a></li>
+	  			<li><a href="<%= url_blog %>">Blogs</a></li>
+	  			<li><a href="<%= url_contact_us %>">Contact Us</a></li>
+	  		</ul>
+	  	</div>
+	  </div>
+
+  <%= yield %>
+
+ <div class="container">
+ 	<div class="footer text-center">
+ 		Copyrights @ Kolte Patil 2017
+ 	</div>
+ </div>
+ <script type="text/javascript" src="/site/js/jquery.bxslider.js"></script>
+ <script type="text/javascript" src="/site/js/jquery.validate.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+   var ht=$(window).height();
+   $('.sliderWrapper .slider').css('height',ht-100);
+   $('.sliderWrapper .bx-viewport').css('height',ht);
+   	$('.bxslider').bxSlider({
+   	   	mode: 'fade',
+    		captions: true,
+    		controls: true,
+    		auto: false
+  	});
+});
+ </script> 
+  </body>
+</html>
