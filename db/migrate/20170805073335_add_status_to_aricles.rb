@@ -1,0 +1,6 @@
+class AddStatusToAricles < ActiveRecord::Migration[5.0]
+  def change
+    add_column :articles, :status, :boolean
+  
+  end
+end
