@@ -137,3 +137,7 @@ h1.color-green{color:#C38D09;font-size: 18px;padding-bottom: 15px;text-transform
 .sliderWrapper .bx-wrapper .bx-pager.bx-default-pager a:hover{background-color: #000;}
 .sliderWrapper .bx-wrapper{margin-bottom: 0px !important;}
 .center-div{margin: 0px auto;border:solid 1px #000;background-color: #f00;text-align: center;}
+.menu-nav{padding: 10px;border-bottom: solid 1px #777;}
+.menu-nav ul{display: block;}
+.menu-nav li{display: inline-block;}
+.menu-nav li a{font-size: 16px;padding-right: 10px;color:#000;}

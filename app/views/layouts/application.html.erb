@@ -3,17 +3,21 @@
   <head>
     <title>Kolte</title>
     <%= csrf_meta_tags %>
-
+   <link rel="stylesheet" type="text/css" href="/site/css/style.css">
     <%#= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <% console %>
   <body style="background-color: #ccc;">
-  <ul>
-  	<li><%= link_to 'Blogs', blogs_path %></li>
-  	<li><%= link_to 'Contacts', contacts_path %></li>
-    <li><%= link_to 'Articles', articles_path %></li>
-  </ul>
-    <%= yield %>
+  <div class="container">
+    <div class="menu-nav">
+      <ul>
+      	<li><%= link_to 'Blogs', blogs_path %></li>
+      	<li><%= link_to 'Contacts', contacts_path %></li>
+        <li><%= link_to 'Articles', articles_path %></li>
+      </ul>
+    </div>
+      <%= yield %>
+  </div>
   </body>
 </html>
