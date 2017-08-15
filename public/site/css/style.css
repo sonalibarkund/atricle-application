@@ -140,4 +140,4 @@ h1.color-green{color:#C38D09;font-size: 18px;padding-bottom: 15px;text-transform
 .menu-nav{padding: 10px;border-bottom: solid 1px #777;}
 .menu-nav ul{display: block;}
 .menu-nav li{display: inline-block;}
-.menu-nav li a{font-size: 16px;padding-right: 10px;color:#000;}
+.menu-nav li a{font-size: 16px;padding-right: 10px;color:#000;letter-spacing: 2px;}
