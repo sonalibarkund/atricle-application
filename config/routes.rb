@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   get 'site/index'
   root 'site#index'
 
+
+  get "/signup", :to => "users#new"
+
+
   get '/overview', :to => "site#overview"
   get '/floorplan', :to => "site#floorplan"
   get '/testimonial', :to => "site#testimonial"
