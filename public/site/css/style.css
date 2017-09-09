@@ -216,3 +216,6 @@ div.floor_panel{
 	max-height: 0;
 	background-color: transparent;
 }
+.accordion-floor-plan{
+	padding: 60px 50px;
+}
