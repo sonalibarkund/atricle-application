@@ -137,3 +137,5 @@ h1.color-green{color:#C38D09;font-size: 18px;padding-bottom: 15px;text-transform
 .sliderWrapper .bx-wrapper .bx-pager.bx-default-pager a:hover{background-color: #000;}
 .sliderWrapper .bx-wrapper{margin-bottom: 0px !important;}
 .center-div{margin: 0px auto;border:solid 1px #000;background-color: #f00;text-align: center;}
+.section-title{font-size: 20px;font-weight: bold;text-transform: uppercase;line-height: 26px;}
+.yellow{color:#f8c034;}

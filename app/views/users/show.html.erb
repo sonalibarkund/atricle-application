@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div style="background-color: #777;padding:10px;">Welcome to <%= (@user.username) %>'s page </div>
 <p>
   <strong>Username:</strong>
   <%= @user.username %>
@@ -9,6 +9,15 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<div style="background-color: #000;color:#fff;font-size: 16px;padding:10px;display: inline-block;"><%= (@user.username) %>'s comments</div>
+<br/
+<ul>
+ <%= @user.comments.each do |comment| %>
+ 		<li><%= comment.desc %><br/></li>
+ <% end %>
+ </ul>
+<br/>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
