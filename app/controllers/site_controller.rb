@@ -2,11 +2,11 @@ class SiteController < ApplicationController
 	layout "site"
 
   def index
-
+   
   end
 
   def overview
-  	
+  	 @user = User.all
   end
 
   def floorplan
@@ -18,7 +18,8 @@ class SiteController < ApplicationController
   end
 
   def blog
-  	@blog = Blog.where(:status => true)
+  	# @blog = Blog.where(:status => true)
+    @blog = Blog.paginate(:page => params[:page], :per_page => 3).where(:status => true)
   end
 
   def blogdetail

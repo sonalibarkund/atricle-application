@@ -21,4 +21,11 @@
 			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 	</div>
+	<div class="container">
+		<div class="col-4">
+			<% @user.each do |user| %>
+				<%= user.username %>
+			<% end %>
+		</div>
+	</div>
 </section>

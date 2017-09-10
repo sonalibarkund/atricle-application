@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div style="background-color: #777;padding:10px;">Welcome to <%= (@user.username) %>'s page </div>
+
+<p>
+  <strong>User Id:</strong>
+  <%= @user.id %>
+</p>
 <p>
   <strong>Username:</strong>
   <%= @user.username %>
@@ -10,11 +15,11 @@
   <%= @user.email %>
 </p>
 
-<div style="background-color: #000;color:#fff;font-size: 16px;padding:10px;display: inline-block;"><%= (@user.username) %>'s comments</div>
+<div style="background-color: #000;color:#fff;font-size: 16px;padding:10px;display: inline-block;"><%= (@user.username) %>'s articles</div>
 <br/
 <ul>
- <%= @user.comments.each do |comment| %>
- 		<li><%= comment.desc %><br/></li>
+ <%= @user.articles.each do |article| %>
+ 		<li><%= article.desc %><br/></li>
  <% end %>
  </ul>
 <br/>

@@ -1,6 +1,9 @@
 <section>
 	<div class="container pdnt100">
 		Blog Page
+
+		<%= will_paginate @blog %>
+
 		<div class="col-12">
 			<% @blog.each do |blog| %>
 				<div class="col-4">
@@ -13,5 +16,6 @@
 				</div>
 			<% end %>
 		</div>
+		
 	</div>
 </section>

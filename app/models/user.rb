@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 	has_secure_password
 
-	has_many :comments,:dependent => :delete_all
+	has_many :articles, :dependent => :delete_all
 
 	before_save {self.email = email.downcase}
 
